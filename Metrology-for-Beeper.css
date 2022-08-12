@@ -495,6 +495,11 @@ hr.mx_RoomView_myReadMarker {
   background: linear-gradient(160deg,#c30052 3%,#6b008f 128.02%);
 }
 
+.mx_JumpToBottomButton_unread .mx_JumpToBottomButton_scrollDown {
+  background: #c30052;
+  border-radius: 4px;
+}
+
 .dark-panel {
   background-color: #262626;
 }
