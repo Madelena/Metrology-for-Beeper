@@ -1,6 +1,6 @@
 # Metrology for Beeper
 
-Metrology is a series of app customizations and redesigns aimed at bringing a bold, clear, and consistent user experience to [various Windows and Android apps](https://github.com/Madelena?tab=repositories&q=Metrology), such as Home Assistant, MusicBee, and more. Its design language is based on [Metro](https://en.wikipedia.org/wiki/Metro_(design_language)) and [Fluent](https://www.microsoft.com/design/fluent/) design systems pioneered by Microsoft Design since the 2010s.
+Metrology is a series of app customizations and redesigns aimed at bringing a bold, clear, and consistent user experience to various apps, such as [Home Assistant](https://github.com/Madelena/Metrology-for-Hass), [MusicBee](https://github.com/Madelena/Metrology-for-Musicbee), and [more](https://github.com/Madelena?tab=repositories&q=Metrology). Its design language is based on [Metro](https://en.wikipedia.org/wiki/Metro_(design_language)) and [Fluent](https://www.microsoft.com/design/fluent/) design systems pioneered by Microsoft Design since the 2010s.
 
 This is a theme for [Beeper](https://www.beeper.com/), a brand-new universal chat client!
 
