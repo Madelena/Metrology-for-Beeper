@@ -614,6 +614,18 @@ hr.mx_RoomView_myReadMarker {
   background-color: #c30052;
 }
 
+.mx_Checkbox.mx_Checkbox_kind_solid input[type=checkbox]:checked+label>.mx_Checkbox_background {
+  background: #c30052;
+  border-color: #c30052;
+}
+
+.mx_StyledRadioButton input[type=radio]:checked+div {
+  border-color: #c30052;
+}
+.mx_StyledRadioButton input[type=radio]:checked+div>div {
+  background: #c30052;
+}
+
 .mx_AccessibleButton_kind_link {
   color: #c30052;
 }
