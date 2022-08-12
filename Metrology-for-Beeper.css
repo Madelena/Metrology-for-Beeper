@@ -500,6 +500,13 @@ hr.mx_RoomView_myReadMarker {
   border-radius: 4px;
 }
 
+.bp_WhoIsTypingTile {
+  height: 24px;
+}
+
+
+/* Panel and Dialogs */
+
 .dark-panel {
   background-color: #262626;
 }
