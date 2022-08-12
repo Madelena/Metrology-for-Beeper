@@ -6,4 +6,9 @@ This is a theme for [Beeper](https://www.beeper.com/), a brand-new universal cha
 
 ![image](https://user-images.githubusercontent.com/4341881/184405906-45f67b70-dd0b-4457-8d55-8633cf497abc.png)
 
-Simply copy and paste the CSS code to the Custom CSS box under Preferences > Appearances, and you're all set.
+## How to Install
+
+To install, simply copy and paste the CSS code to the Custom CSS box under Settings > Appearances, and you're all set.
+
+As theming for Beeper is still at an early stage of development, so any new updates may break the theme. As a precaution, the app will reset to the base theme every time the app is restarted. You will need to go back into Settings > Appearance and press the Apply button to reapply the theme each time.
+
