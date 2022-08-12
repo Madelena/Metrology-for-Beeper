@@ -465,6 +465,16 @@ hr.mx_RoomView_myReadMarker {
   border-radius: 4px;
 }
 
+.mx_SendMessageComposer .mx_BasicMessageComposer .mx_BasicMessageComposer_input>* {
+  line-height: 2.1rem;
+  margin-top: 1rem;
+}
+
+.mx_SendMessageComposer .mx_BasicMessageComposer .mx_BasicMessageComposer_input>:first-child {
+  line-height: 2.1rem;
+  margin-top: 0;
+}
+
 .mx_MessageComposer_send {
   background: linear-gradient(160deg,#ff3388 3%,#c30052 128.02%);
   background-clip: text;
