@@ -281,6 +281,10 @@ body {
   color: #767676
 }
 
+.mx_MatrixChat.resizing>.mx_ResizeHandle, .mx_MatrixChat>.mx_ResizeHandle:hover, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle.resizing, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle:hover {
+  box-shadow: inset 4px 0 0 0 #c30052;
+}
+
 
 /* Room Header */
 
