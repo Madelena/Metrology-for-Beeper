@@ -285,7 +285,8 @@ body {
 /* Room Header */
 
 .mx_RoomHeader {
-  background-color: black;
+  background: linear-gradient(to bottom, black, rgba(0,0,0,.25));
+  backdrop-filter: blur(10px);
 }
 
 .mx_RoomHeader_wrapper {
@@ -318,6 +319,17 @@ body {
 
 
 /* Messages */
+
+.mx_RoomView_body .mx_RoomView_timeline {
+  margin-top: -56px;
+  margin-bottom: -80px;
+}
+
+.mx_RoomView_body .mx_RoomView_messagePanel, .mx_RoomView_body .mx_RoomView_messagePanelSearchSpinner, .mx_RoomView_body .mx_RoomView_messagePanelSpinner {
+  padding-top: 56px;
+  padding-bottom: 80px;
+}
+
 
 .mx_EventTile_message .mx_EventTile_line, .mx_EventTile_sticker .mx_EventTile_line, .mx_EventTile_messageOut .mx_EventTile_line {
   padding: 6px 10px;
@@ -459,8 +471,16 @@ hr.mx_RoomView_myReadMarker {
   margin-bottom: 8px;
 }
 
+
+/* Message Composer */
+
+.mx_MessageComposer {
+  background: linear-gradient(to bottom, rgba(0,0,0,.5), black);
+  backdrop-filter: blur(10px);
+}
+
 .mx_MessageComposer_wrapper {
-  background: #262626;
+  background: rgba(76,76,76,.5);
   border: .5px solid #737373;
   border-radius: 4px;
 }
@@ -495,6 +515,10 @@ hr.mx_RoomView_myReadMarker {
   background: linear-gradient(160deg,#c30052 3%,#6b008f 128.02%);
 }
 
+.mx_JumpToBottomButton {
+  bottom: 92px;
+}
+
 .mx_JumpToBottomButton_unread .mx_JumpToBottomButton_scrollDown {
   background: #c30052;
   border-radius: 4px;
@@ -502,6 +526,8 @@ hr.mx_RoomView_myReadMarker {
 
 .bp_WhoIsTypingTile {
   height: 24px;
+  z-index: 10;
+  background: black;
 }
 
 
@@ -548,8 +574,8 @@ hr.mx_RoomView_myReadMarker {
   top: 32px;
   left: 0;
   width: 100%;
-  height: calc(100% - 32px);
-  align-items: normal;
+  height: calc(100% - 64px);
+  align-items: center;
   justify-content: space-around;
 }
 
