@@ -604,12 +604,13 @@ hr.mx_RoomView_myReadMarker {
 /* Panel and Dialogs */
 
 .dark-panel {
-  background-color: hsl(var(--metrology-gray-2));
+  background-color: hsl(var(--metrology-gray-1));
 }
 
-.mx_ContextualMenu {
+.mx_ContextualMenu, .bp_newChatDropdown {
   background-color: hsl(var(--metrology-gray-1));
   color: hsl(var(--metrology-text-primary));
+  border-radius: var(--metrology-round-corner-medium);
 }
 
 .mx_IconizedContextMenu .mx_IconizedContextMenu_optionList .mx_AccessibleButton {
