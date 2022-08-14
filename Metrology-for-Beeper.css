@@ -1,7 +1,24 @@
 
 body {
-  background-color: black;
-  color: white;
+  --metrology-hue: 335; /* Enter values between 0 and 359 to change the color of the theme. */
+
+  --metrology-background: 0, 0%, 0%;
+  --metrology-text-primary: 0, 0%, 100%;
+
+  --metrology-accent: var(--metrology-hue), 100%, 38%;
+  --metrology-highlight: var(--metrology-hue), 100%, 60%;
+  --metrology-complement: calc(var(--metrology-hue) - 50), 100%, 28%;
+
+  --metrology-gray-1: 0, 0%, 9%;
+  --metrology-gray-2: 0, 0%, 15%;
+  --metrology-gray-3: 0, 0%, 21%;
+  --metrology-gray-6: 0, 0%, 46%;
+
+  --metrology-round-corner-small: 0;
+  --metrology-round-corner-medium: 4px; /* 0 for the sharp Metro experience. 4px for a more moderate Fluent. */
+
+  background-color: hsl(var(--metrology-background));
+  color: hsl(var(--metrology-text-primary)) ;
 }
 
 .bp_TitleBar {
@@ -15,7 +32,7 @@ body {
 .mx_MatrixChat>:not(.mx_SpacePanel):not(.mx_ResizeHandle):not(.mx_LeftPanel_wrapper):not(.bp_LeftPanel) {
   margin-top: 32px;
   height: calc(100% - 32px) !important;
-  background-color: black;
+  background-color: hsl(var(--metrology-background));
 }
 
 
@@ -38,7 +55,7 @@ body {
   position: absolute !important;
   top: 0;
   left: 0;
-  background: #262626;
+  background: hsl(38, 38, 38);
   height: 100% !important;
   width: 48px;
   padding-top: 36px;
@@ -71,14 +88,14 @@ body {
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem.active, .bp_LeftPanel .spaceBar .bp_SpaceBarItem.active:hover {
   background-color: transparent;
-  border-left: 4px solid #c30052;
+  border-left: 4px solid hsl(var(--metrology-accent));
   padding-left: 0;
   width: 40px;
   border-right: 4px solid transparent;
 }
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem {
-  border-radius: 0;
+  border-radius: var(--metrology-round-corner-small);
   border: none;
   width: 40px;
   height: 40px;
@@ -87,7 +104,7 @@ body {
 }
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_SpaceBarItem_badge {
-  background-color: #c30052;
+  background-color: hsl(var(--metrology-accent));
 }
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_Avatar {
@@ -110,9 +127,9 @@ body {
 }
 
 .bp_CommandBarSearch {
-  border-radius: 4px; 
-  background: #262626;
-  /* border: 1px solid #767676; */
+  border-radius: var(--metrology-round-corner-medium); 
+  background: hsl(var(--metrology-gray-2));
+  /* border: 1px solid hsl(var(--metrology-gray-6)); */
 }
 
 .bp_CommandBarSearch .bp_CommandBarSearch_overlay.bp_CommandBarSearch_overlay--prefix {
@@ -166,18 +183,18 @@ body {
 }
 
 .bp_LeftPanel .rooms .favourites_avatar--unread .mx_BaseAvatar {
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 0%), 0 0 0 3px #c30052;
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 0%), 0 0 0 3px hsl(var(--metrology-accent));
 }
 
 
 /* Avatars */
 
 .bp_Avatar_bg_1, .bp_Avatar_bg_2, .bp_Avatar_bg_3 {
-  background: linear-gradient(160deg,#404040 3%,#25262d 128.02%)
+  background: linear-gradient(160deg,hsl(var(--metrology-gray-3)) 0%,hsl(var(--metrology-gray-2)) 100%)
 }
 
 .mx_BaseAvatar_initial {
-  color: white;
+  color: hsl(var(--metrology-text-primary));
   mix-blend-mode: color-dodge;
   margin-top: -2px;
 }
@@ -186,7 +203,7 @@ body {
 /* Contact List */
 
 .bp_LeftPanel, .bp_LeftPanel .rooms_subtitle-container, .bp_RoomTile .actions-container .info {
-  background-color: #161616;
+  background-color: hsl(var(--metrology-gray-1));
 }
 
 .bp_LeftPanel .rooms_subtitle-container {
@@ -203,12 +220,12 @@ body {
 }
 
 .bp_RoomTile:not(.small) .outline {
-  border-radius: 0;
+  border-radius: var(--metrology-round-corner-small);
   padding: 8px 4px 8px 4px;
 }
 
 .bp_RoomTile:not(.small):hover:not(.active) .outline {
-  background-color: #363636;
+  background-color: hsl(var(--metrology-gray-3));
 }
 
 .bp_RoomTile .name {
@@ -221,19 +238,19 @@ body {
 }
 
 .bp_RoomTile .preview>span {
-  color: #767676;
+  color: hsl(var(--metrology-gray-6));
 }
 
 .bp_RoomTile:not(.small) .indicator.unread {
   -webkit-mask-image: none;
   mask-image: none;
-  background-color: #c30052;
+  background-color: hsl(var(--metrology-accent));
   margin-left: -10px !important;
 }
 
 .bp_RoomTile.isUnread .preview>span {
   font-weight: 500;
-  color: #f783b2;
+  color: hsl(var(--metrology-highlight));
 }
 
 .bp_RoomTile .actions-container {
@@ -257,39 +274,39 @@ body {
 }
 
 .bp_RoomTile:not(.small).active .outline, .bp_RoomTile:not(.small).active .outline.electronTransparency, .bp_RoomTile:not(.small).active .row.info {
-  background-color: #363636;
+  background-color: hsl(var(--metrology-gray-3));
 }
 
 .bp_RoomTile:not(.small):hover:not(.active) .outline .mask, .bp_RoomTile:not(.small).active .outline .mask {
-  background: linear-gradient(90deg,transparent 50%,#363636 90%);
+  background: linear-gradient(90deg,transparent 50%,hsl(var(--metrology-gray-3)) 90%);
 }
 
 .bp_RoomTile:not(.small):hover:not(.active) .row.info {
-  background: #363636;
+  background: hsl(var(--metrology-gray-3));
 }
 
 .bp_RoomTile .tile_actions-button, .bp_RoomTile .tile_actions .bp_Button2 {
-  border-radius: 0;
+  border-radius: var(--metrology-round-corner-small);
 }
 
 .bp_RoomTile .tile_actions-button:hover {
-  background-color: #363636;
+  background-color: hsl(var(--metrology-gray-3));
 }
 
 .bp_LeftPanel .rooms .unread_hint {
   padding: 32px 48px;
-  color: #767676
+  color: hsl(var(--metrology-gray-6))
 }
 
 .mx_MatrixChat.resizing>.mx_ResizeHandle, .mx_MatrixChat>.mx_ResizeHandle:hover, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle.resizing, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle:hover {
-  box-shadow: inset 4px 0 0 0 #c30052;
+  box-shadow: inset 4px 0 0 0 hsl(var(--metrology-accent));
 }
 
 
 /* Room Header */
 
 .mx_RoomHeader {
-  background: linear-gradient(to bottom, black, rgba(0,0,0,.25));
+  background: linear-gradient(to bottom, hsl(var(--metrology-background)), hsla(var(--metrology-background),.25));
   backdrop-filter: blur(10px);
 }
 
@@ -303,10 +320,10 @@ body {
 }
 
 .mx_RoomHeader_name {
-  color: white;
+  color: hsl(var(--metrology-text-primary));
   font-size: 2.5rem;
   line-height: 1.25;
-  border-radius: 0;
+  border-radius: var(--metrology-round-corner-small);
   padding: 1px 12px 4px 0;
 }
 
@@ -344,13 +361,13 @@ body {
 }
 
 .mx_EventTile_messageIn .mx_EventTile_line {
-  background: #363636;
-  color: white;
+  background: hsl(var(--metrology-gray-3));
+  color: hsl(var(--metrology-text-primary));
 }
 
 .mx_EventTile_messageOut .mx_EventTile_line {
-  background: linear-gradient(145deg,#c30052 3%,#6b008f 97%);
-  color: white;
+  background: linear-gradient(145deg,hsl(var(--metrology-accent)) 3%,hsl(var(--metrology-complement)) 97%);
+  color: hsl(var(--metrology-text-primary));
 }
 
 .mx_EventTile_message.mx_EventTile_messageIn .mx_EventTile_line::before {
@@ -358,7 +375,7 @@ body {
   position: absolute;
   bottom: -1px;
   left: -9px;
-  color: #363636;
+  color: hsl(var(--metrology-gray-3));
   line-height: 1;
 }
 
@@ -367,7 +384,7 @@ body {
   position: absolute;
   bottom: -1px;
   right: -9px;
-  color: #6b008f;
+  color: hsl(var(--metrology-complement));
   text-align: right;
   line-height: 1;
 }
@@ -381,17 +398,17 @@ body {
 .mx_EventTile_sticker.mx_EventTile_messageIn .mx_MessageBody .mx_EventTile_line,
 .mx_EventTile_message.mx_EventTile_messageOut .mx_MessageBody .mx_EventTile_line,
 .mx_EventTile_sticker.mx_EventTile_messageOut .mx_MessageBody .mx_EventTile_line {
-  border-radius: 4px;
+  border-radius: var(--metrology-round-corner-medium);
 }
 
 .mx_EventTile_message.mx_EventTile_firstInGroup .mx_EventTile_line, .mx_EventTile_sticker.mx_EventTile_firstInGroup .mx_EventTile_line {
-  border-top-left-radius: 4px!important;
-  border-top-right-radius: 4px!important;
+  border-top-left-radius: var(--metrology-round-corner-medium)!important;
+  border-top-right-radius: var(--metrology-round-corner-medium)!important;
 }
 
 .mx_EventTile_message.mx_EventTile_last .mx_EventTile_line, .mx_EventTile_message.mx_EventTile_lastInGroup .mx_EventTile_line, .mx_EventTile_message.mx_EventTile_lastInSection .mx_EventTile_line, .mx_EventTile_sticker.mx_EventTile_last .mx_EventTile_line, .mx_EventTile_sticker.mx_EventTile_lastInGroup .mx_EventTile_line, .mx_EventTile_sticker.mx_EventTile_lastInSection .mx_EventTile_line {
-  border-bottom-left-radius: 4px!important;
-  border-bottom-right-radius: 4px!important;
+  border-bottom-left-radius: var(--metrology-round-corner-medium)!important;
+  border-bottom-right-radius: var(--metrology-round-corner-medium)!important;
 }
 
 .mx_EventTile_message.mx_EventTile_messageIn .mx_EventTile_line {
@@ -441,13 +458,13 @@ body {
 
 .mx_ReplyChain_wrapper .mx_ReplyChain:last-child {
   margin-bottom: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: var(--metrology-round-corner-medium);
+  border-bottom-right-radius: var(--metrology-round-corner-medium);
 }
 
 .mx_ReplyChain_wrapper .mx_ReplyChain:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: var(--metrology-round-corner-medium);
+  border-top-right-radius: var(--metrology-round-corner-medium);
   margin-top: 4px;
 }
 
@@ -458,7 +475,7 @@ li.mx_RoomView_myReadMarker_container {
 }
 
 hr.mx_RoomView_myReadMarker {
-  border: 1px solid #c30052;
+  border: 1px solid hsl(var(--metrology-accent));
   border-bottom: 0;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -466,7 +483,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_RoomView_myReadMarker_newLabel {
-  color: #c30052;
+  color: hsl(var(--metrology-accent));
   height: 24px;
   text-transform: uppercase;
   font-size: 1.15rem;
@@ -479,14 +496,14 @@ hr.mx_RoomView_myReadMarker {
 /* Message Composer */
 
 .mx_MessageComposer {
-  background: linear-gradient(to bottom, rgba(0,0,0,.5), black);
+  background: linear-gradient(to bottom, hsla(var(--metrology-background),.5), hsl(var(--metrology-background)));
   backdrop-filter: blur(10px);
 }
 
 .mx_MessageComposer_wrapper {
-  background: rgba(76,76,76,.5);
-  border: .5px solid #737373;
-  border-radius: 4px;
+  background: hsla(76,76,76,.5);
+  border: .5px solid hsl(var(--metrology-gray-6));
+  border-radius: var(--metrology-round-corner-medium);
 }
 
 .mx_SendMessageComposer .mx_BasicMessageComposer .mx_BasicMessageComposer_input>* {
@@ -500,7 +517,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_MessageComposer_send {
-  background: linear-gradient(160deg,#ff3388 3%,#c30052 128.02%);
+  background: linear-gradient(160deg, hsl(var(--metrology-complement)) 3%, hsl(var(--metrology-accent)) 128.02%);
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -516,7 +533,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_HomePage_default .mx_HomePage_default_buttons .mx_AccessibleButton {
-  background: linear-gradient(160deg,#c30052 3%,#6b008f 128.02%);
+  background: linear-gradient(160deg,hsl(var(--metrology-accent)) 3%,hsl(var(--metrology-complement)) 128.02%);
 }
 
 .mx_JumpToBottomButton {
@@ -524,26 +541,26 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_JumpToBottomButton_unread .mx_JumpToBottomButton_scrollDown {
-  background: #c30052;
-  border-radius: 4px;
+  background: hsl(var(--metrology-accent));
+  border-radius: var(--metrology-round-corner-medium);
 }
 
 .bp_WhoIsTypingTile {
   height: 24px;
   z-index: 10;
-  background: black;
+  background: hsl(var(--metrology-background));
 }
 
 
 /* Panel and Dialogs */
 
 .dark-panel {
-  background-color: #262626;
+  background-color: hsl(var(--metrology-gray-2));
 }
 
 .mx_ContextualMenu {
-  background-color: #161616;
-  color: white;
+  background-color: hsl(var(--metrology-gray-1));
+  color: hsl(var(--metrology-text-primary));
 }
 
 .mx_IconizedContextMenu .mx_IconizedContextMenu_optionList .mx_AccessibleButton {
@@ -555,20 +572,20 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_Dialog {
-  background-color: #262626;
-  border-radius: 4px;
+  background-color: hsl(var(--metrology-gray-2));
+  border-radius: var(--metrology-round-corner-medium);
 }
 
 .rc-dialog-wrap {
-  background-color: rgba(0,0,0,.66);
+  background-color: hsla(var(--metrology-background),.66);
 }
 
 .commandbar-animation.commandbar-opened {
-  background-color: #262626 !important;
+  background-color: hsl(var(--metrology-gray-2)) !important;
 }
 
 .commandbar-ek2juz {
-  background: #c30052
+  background: hsl(var(--metrology-background))
 }
 
 
@@ -604,7 +621,7 @@ hr.mx_RoomView_myReadMarker {
 
 .mx_TabbedView_tabsOnLeft .mx_TabbedView_tabLabel_active {
   background-color: transparent;
-  border-left: 4px solid #c30052;
+  border-left: 4px solid hsl(var(--metrology-accent));
 }
 
 .mx_TabbedView_tabsOnLeft .mx_TabbedView_maskedIcon {
@@ -612,10 +629,10 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_TabbedView_tabLabel {
-  border-radius: 4px;  
+  border-radius: var(--metrology-round-corner-medium);  
   border-left: 4px solid transparent;
   margin-bottom: 4px;
-  border-radius: 0;
+  border-radius: var(--metrology-round-corner-small);
 }
 
 .mx_SettingsTab_heading {
@@ -637,31 +654,31 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .ChatNetworksDialog-leftbar .tabbar .tab.selected, .ChatNetworksDialog-leftbar .tabbar .tab.selected:hover {
-  background: #c30052;
+  background: hsl(var(--metrology-accent));
 }
 
 .mx_ToggleSwitch.mx_ToggleSwitch_on {
-  background-color: #c30052;
+  background-color: hsl(var(--metrology-accent));
 }
 
 .mx_Checkbox.mx_Checkbox_kind_solid input[type=checkbox]:checked+label>.mx_Checkbox_background {
-  background: #c30052;
-  border-color: #c30052;
+  background: hsl(var(--metrology-accent));
+  border-color: hsl(var(--metrology-accent));
 }
 
 .mx_StyledRadioButton input[type=radio]:checked+div {
-  border-color: #c30052;
+  border-color: hsl(var(--metrology-accent));
 }
 .mx_StyledRadioButton input[type=radio]:checked+div>div {
-  background: #c30052;
+  background: hsl(var(--metrology-accent));
 }
 
 .mx_AccessibleButton_kind_link {
-  color: #c30052;
+  color: hsl(var(--metrology-accent));
 }
 
 .mx_AccessibleButton_hasKind:not(.mx_AccessibleButton_kind_link):not(.mx_AccessibleButton_kind_link_inline):not(.mx_MatrixChat_splashButtons), .mx_Dialog_buttons button, .mx_Dialog_buttons input[type=submit], .mx_Dialog button, .mx_Dialog input[type=submit] {
-  border-radius: 4px;
+  border-radius: var(--metrology-round-corner-medium);
 }
 
 .mx_ToggleSwitch {
