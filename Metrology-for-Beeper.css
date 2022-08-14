@@ -121,10 +121,20 @@ body {
   background-color: hsl(var(--metrology-accent));
 }
 
+.bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_Avatar, .bp_LeftPanel .spaceBar .bp_SpaceBarItem img {
+  filter: grayscale(1) opacity(0.75);
+}
+
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_Avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--metrology-round-corner-medium);
+  filter: none!important;
+}
+
+.bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_Avatar span {
+  color: hsl(var(--metrology-text-primary)) !important;
+  mix-blend-mode: color-dodge !important;
 }
 
 
