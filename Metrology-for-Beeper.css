@@ -625,6 +625,12 @@ hr.mx_RoomView_myReadMarker {
   border-radius: var(--metrology-round-corner-medium);
 }
 
+.mx_Dialog_cancelButton {
+  width: 12px;
+  height: 12px;
+  top: 2px;
+}
+
 .rc-dialog-wrap {
   background-color: hsla(var(--metrology-background),.66);
 }
