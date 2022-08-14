@@ -9,6 +9,8 @@ body {
   /* Dark Theme */
   --metrology-background: 0, 0%, 0%;
   --metrology-text-primary: 0, 0%, 100%;
+  --metrology-text-heading: 0, 0%, 95%;
+  --metrology-text-secondary: 0, 0%, 66%;
 
   --metrology-gray-1: 0, 0%, 9%;
   --metrology-gray-2: 0, 0%, 15%;
@@ -18,6 +20,8 @@ body {
   /* Light Theme - Uncomment the following code to apply, then switch to Light Theme in the app. */
   /* --metrology-background: 0, 0%, 100%;
   --metrology-text-primary: 0, 0%, 0%;
+  --metrology-text-heading: 0, 0%, 10%;
+  --metrology-text-secondary: 0, 0%, 50%;
 
   --metrology-gray-1: 0, 0%, 91%;
   --metrology-gray-2: 0, 0%, 85%;
@@ -542,6 +546,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_EmojiPicker_category_label, .mx_EmojiPicker_preview_name {
+  color: hsl(var(--metrology-text-heading));
   font-size: 1.15rem;
   font-weight: 600;
   margin: 8px 0;
@@ -624,6 +629,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_Dialog_title {
+  color: hsl(var(--metrology-text-heading));
   font-weight: 600;
   font-size: 1.25rem;
   margin-top: 0;
@@ -652,8 +658,13 @@ hr.mx_RoomView_myReadMarker {
   border-radius: var(--metrology-round-corner-small);
 }
 
+.mx_SettingsTab {
+  color: hsl(var(--metrology-text-primary));
+}
+
 .mx_SettingsTab_heading {
   font-size: 3rem;
+  color: hsl(var(--metrology-text-heading));
 }
 
 .mx_TabbedView_tabsOnLeft .mx_TabbedView_tabLabels {
@@ -662,11 +673,13 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .ChatNetworksDialog-leftbar .tabbar .tab .name {
+  color: hsl(var(--metrology-text-primary));
   font-weight: normal;
   font-size: 14px;
 }
 
 .ChatNetworksDialog-content .panel-title {
+  color: hsl(var(--metrology-text-heading));
   font-weight: 600;
 }
 
