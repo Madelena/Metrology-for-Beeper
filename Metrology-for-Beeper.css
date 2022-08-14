@@ -620,6 +620,17 @@ hr.mx_RoomView_myReadMarker {
   padding: 6px 16px 6px 11px;
 }
 
+#confirmConnectionSearchInput, #newChatUserSearchInput {
+  background-color: hsl(var(--metrology-gray-2));
+  /* color: hsl(var(--metrology-text-primary)); */
+  border-radius: var(--metrology-round-corner-medium);
+}
+
+.bp_newChatDropdown .contactItem.active, .bp_newChatDropdown .contactItem:hover {
+  background-color: hsl(var(--metrology-gray-3));
+  border-radius: var(--metrology-round-corner-medium);
+}
+
 .mx_Dialog {
   background-color: hsl(var(--metrology-gray-1));
   border-radius: var(--metrology-round-corner-medium);
