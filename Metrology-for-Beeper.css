@@ -2,17 +2,27 @@
 body {
   --metrology-hue: 335; /* Enter values between 0 and 359 to change the color of the theme. */
 
-  --metrology-background: 0, 0%, 0%;
-  --metrology-text-primary: 0, 0%, 100%;
-
   --metrology-accent: var(--metrology-hue), 100%, 38%;
   --metrology-highlight: var(--metrology-hue), 100%, 60%;
   --metrology-complement: calc(var(--metrology-hue) - 50), 100%, 28%;
+
+  /* Dark Theme */
+  --metrology-background: 0, 0%, 0%;
+  --metrology-text-primary: 0, 0%, 100%;
 
   --metrology-gray-1: 0, 0%, 9%;
   --metrology-gray-2: 0, 0%, 15%;
   --metrology-gray-3: 0, 0%, 21%;
   --metrology-gray-6: 0, 0%, 46%;
+
+  /* Light Theme - Uncomment the following code to apply, then switch to Light Theme in the app. */
+  /* --metrology-background: 0, 0%, 100%;
+  --metrology-text-primary: 0, 0%, 0%;
+
+  --metrology-gray-1: 0, 0%, 91%;
+  --metrology-gray-2: 0, 0%, 85%;
+  --metrology-gray-3: 0, 0%, 79%;
+  --metrology-gray-6: 0, 0%, 54%; */
 
   --metrology-round-corner-small: 0;
   --metrology-round-corner-medium: 4px; /* 0 for the sharp Metro experience. 4px for a more moderate Fluent. */
@@ -55,7 +65,7 @@ body {
   position: absolute !important;
   top: 0;
   left: 0;
-  background: hsl(38, 38, 38);
+  background: hsl(var(--metrology-gray-2));
   height: 100% !important;
   width: 48px;
   padding-top: 36px;
@@ -303,6 +313,13 @@ body {
 }
 
 
+/* Main Panel */
+
+.bp_MainPanel {
+  margin-left: 1px;
+}
+
+
 /* Room Header */
 
 .mx_RoomHeader {
@@ -501,7 +518,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_MessageComposer_wrapper {
-  background: hsla(76,76,76,.5);
+  background: hsla(var(--metrology-gray-3),.5);
   border: .5px solid hsl(var(--metrology-gray-6));
   border-radius: var(--metrology-round-corner-medium);
 }
@@ -572,7 +589,7 @@ hr.mx_RoomView_myReadMarker {
 }
 
 .mx_Dialog {
-  background-color: hsl(var(--metrology-gray-2));
+  background-color: hsl(var(--metrology-gray-1));
   border-radius: var(--metrology-round-corner-medium);
 }
 
