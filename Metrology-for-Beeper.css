@@ -687,6 +687,35 @@ hr.mx_RoomView_myReadMarker {
   background: hsl(var(--metrology-accent));
 }
 
+
+.mx_AccessibleButton_hasKind:not(.mx_AccessibleButton_kind_link):not(.mx_AccessibleButton_kind_link_inline):not(.mx_MatrixChat_splashButtons), .mx_Dialog_buttons button, .mx_Dialog_buttons input[type=submit], .mx_Dialog button, .mx_Dialog input[type=submit] {
+  box-shadow: inset 0 0 0 1px hsl(var(--metrology-gray-6))!important;
+  background: hsl(var(--metrology-gray-2));
+  border-radius: var(--metrology-round-corner-medium);
+}
+
+.mx_Dialog_buttons button:hover, .mx_Dialog button:hover {
+  background: hsl(var(--metrology-gray-3));
+}
+
+.mx_Dialog_buttons button:active, .mx_Dialog button:active {
+  background: hsl(var(--metrology-gray-2));
+}
+
+.mx_AccessibleButton_kind_primary, .mx_Dialog_buttons button.mx_Dialog_primary, .mx_Dialog_buttons input[type=submit].mx_Dialog_primary, .mx_Dialog button.mx_Dialog_primary, .mx_Dialog input[type=submit].mx_Dialog_primary {
+  box-shadow: none!important;
+  background: hsl(var(--metrology-accent));
+}
+
+.mx_AccessibleButton_kind_primary:hover, .mx_Dialog_buttons button.mx_Dialog_primary:hover, .mx_Dialog button.mx_Dialog_primary:hover {
+  background: hsl(var(--metrology-highlight));
+}
+
+.mx_AccessibleButton_kind_primary:active, .mx_Dialog_buttons button.mx_Dialog_primary:active, .mx_Dialog button.mx_Dialog_primary:active {
+  background: hsl(var(--metrology-accent));
+}
+
+
 .mx_ToggleSwitch.mx_ToggleSwitch_on {
   background-color: hsl(var(--metrology-accent));
 }
@@ -696,6 +725,7 @@ hr.mx_RoomView_myReadMarker {
   border-color: hsl(var(--metrology-accent));
 }
 
+
 .mx_StyledRadioButton input[type=radio]:checked+div {
   border-color: hsl(var(--metrology-accent));
 }
@@ -703,12 +733,9 @@ hr.mx_RoomView_myReadMarker {
   background: hsl(var(--metrology-accent));
 }
 
+
 .mx_AccessibleButton_kind_link {
   color: hsl(var(--metrology-accent));
-}
-
-.mx_AccessibleButton_hasKind:not(.mx_AccessibleButton_kind_link):not(.mx_AccessibleButton_kind_link_inline):not(.mx_MatrixChat_splashButtons), .mx_Dialog_buttons button, .mx_Dialog_buttons input[type=submit], .mx_Dialog button, .mx_Dialog input[type=submit] {
-  border-radius: var(--metrology-round-corner-medium);
 }
 
 .mx_ToggleSwitch {
