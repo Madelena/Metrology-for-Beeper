@@ -574,6 +574,33 @@ hr.mx_RoomView_myReadMarker {
 }
 
 
+/* Message Search */
+
+.mx_RoomView_auxPanel, .mx_RoomView_lowerAuxPanel {
+  z-index: 5;
+}
+
+.mx_SearchBar {
+  background: linear-gradient(to bottom, hsl(var(--metrology-background)), hsla(var(--metrology-background),.25));
+  backdrop-filter: blur(10px);
+}
+
+.mx_SearchBar .mx_SearchBar_button {
+  border-bottom: 4px solid hsl(var(--metrology-accent));
+  padding: 5px 0;
+}
+
+.mx_SearchBar .mx_SearchBar_unselected {
+  border-color: transparent;
+}
+
+.mx_SearchBar .mx_SearchBar_input {
+  background: hsla(var(--metrology-gray-3),.5);
+  border: .5px solid hsl(var(--metrology-gray-6));
+  border-radius: var(--metrology-round-corner-medium);
+}
+
+
 /* Panel and Dialogs */
 
 .dark-panel {
