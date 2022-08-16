@@ -270,13 +270,20 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--metrology-text-secondary));
 }
 
+.bp_RoomTile:not(.small) .outline>div .indicator {
+  margin-left: -10px !important;
 }
 
 .bp_RoomTile:not(.small) .indicator.unread {
   -webkit-mask-image: none;
   mask-image: none;
   background-color: hsl(var(--metrology-accent));
-  margin-left: -10px !important;
+}
+
+.bp_RoomTile .indicator.mention {
+  -webkit-mask-image: none;
+  mask-image: none;
+  background-color: hsl(var(--metrology-highlight));
 }
 
 .bp_RoomTile.isUnread .preview>span {
