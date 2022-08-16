@@ -565,6 +565,21 @@ hr.mx_RoomView_myReadMarker {
   margin-bottom: 8px;
 }
 
+.mx_ReactionsRowButton {
+  background: hsl(var(--metrology-gray-2));
+  border: 0;
+}
+
+.mx_ReactionsRowButton:hover {
+  background: hsl(var(--metrology-gray-3));
+  box-shadow: none;
+}
+
+.mx_ReactionsRowButton.mx_ReactionsRowButton_selected {
+  box-shadow: none;
+  background: hsl(var(--metrology-accent));
+}
+
 
 /* Message Composer */
 
