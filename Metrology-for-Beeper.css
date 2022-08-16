@@ -505,6 +505,11 @@ h1, h2, h3, h4, h5, h6 {
 .mx_EventTile_message .mx_MessageTimestamp, .mx_EventTile_sticker .mx_MessageTimestamp {
   color: hsl(var(--metrology-text-secondary));
 }
+
+.mx_EventTile_messageIn .mx_ReplyChain {
+  background: hsla(var(--metrology-gray-1),.25)
+}
+
 .mx_ReplyChain_wrapper .mx_ReplyChain:last-child {
   margin-bottom: 4px;
   border-bottom-left-radius: var(--metrology-round-corner-medium);
@@ -651,6 +656,10 @@ hr.mx_RoomView_myReadMarker {
   background-color: hsl(var(--metrology-gray-1));
 }
 
+.mx_RightPanel_headerButton_highlight:before {
+  background-color: hsl(var(--metrology-accent))!important;
+}
+
 .mx_ContextualMenu, .bp_newChatDropdown {
   background-color: hsl(var(--metrology-gray-1));
   color: hsl(var(--metrology-text-primary));
@@ -747,6 +756,10 @@ hr.mx_RoomView_myReadMarker {
   margin-left: 16px;
 }
 
+.mx_TabbedView_tabsOnLeft .mx_TabbedView_tabLabel_active .mx_TabbedView_maskedIcon:before {
+  background-color: hsl(var(--metrology-accent));
+}
+
 .mx_TabbedView_tabLabel {
   border-radius: var(--metrology-round-corner-medium);  
   border-left: 4px solid transparent;
@@ -831,6 +844,10 @@ hr.mx_RoomView_myReadMarker {
   border-color: hsl(var(--metrology-accent));
 }
 
+
+.mx_StyledRadioButton_checked {
+  border-color: hsl(var(--metrology-accent));
+}
 
 .mx_StyledRadioButton input[type=radio]:checked+div {
   border-color: hsl(var(--metrology-accent));
