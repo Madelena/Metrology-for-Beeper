@@ -16,6 +16,7 @@ body {
   --metrology-gray-2: 0, 0%, 15%;
   --metrology-gray-3: 0, 0%, 21%;
   --metrology-gray-6: 0, 0%, 46%;
+  --metrology-shadow: 0, 0%, 0%, .25;
 
   /* Light Theme - Uncomment the following code to apply, then switch to Light Theme in the app. */
   /* --metrology-background: 0, 0%, 100%;
@@ -26,7 +27,8 @@ body {
   --metrology-gray-1: 0, 0%, 98%;
   --metrology-gray-2: 0, 0%, 95%;
   --metrology-gray-3: 0, 0%, 90%;
-  --metrology-gray-6: 0, 0%, 82%; */
+  --metrology-gray-6: 0, 0%, 82%;
+  --metrology-shadow: 0, 0%, 0%, .1; */
 
   --metrology-round-corner-small: 0;
   --metrology-round-corner-medium: 4px; /* 0 for the sharp Metro experience. 4px for a more moderate Fluent. */
@@ -39,12 +41,12 @@ body {
   background-color: transparent;
   position: absolute;
   height: 32px;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
 }
 
 .mx_MatrixChat>:not(.mx_SpacePanel):not(.mx_ResizeHandle):not(.mx_LeftPanel_wrapper):not(.bp_LeftPanel) {
-  margin-top: 32px;
+  padding-top: 32px;
   height: calc(100% - 32px) !important;
   background-color: hsl(var(--metrology-background));
 }
@@ -77,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100% !important;
   width: 48px;
   padding-top: 36px;
+  box-shadow: -8px 0px 24px -12px hsla(var(--metrology-shadow)) inset;
 }
 
 .bp_LeftPanel .spaceBar .grid {
@@ -121,6 +124,10 @@ h1, h2, h3, h4, h5, h6 {
   border-right: 4px solid transparent;
 }
 
+.bp_LeftPanel .spaceBar .bp_SpaceBarItem_image {
+  background-color: hsl(var(--metrology-text-primary));
+}
+
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_SpaceBarItem_badge {
   background-color: hsl(var(--metrology-accent));
 }
@@ -138,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_Avatar span {
   color: hsl(var(--metrology-text-primary)) !important;
-  mix-blend-mode: color-dodge !important;
+  mix-blend-mode: none !important;
 }
 
 
@@ -236,6 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bp_LeftPanel .rooms_subtitle-container {
   min-height: 24px !important;
+  background: none;
 }
 
 .bp_RoomTile {
@@ -353,6 +361,8 @@ h1, h2, h3, h4, h5, h6 {
 .mx_RoomHeader {
   background: linear-gradient(to bottom, hsl(var(--metrology-background)), hsla(var(--metrology-background),.25));
   backdrop-filter: blur(10px);
+  box-shadow: none;
+  /* box-shadow: 0 12px 20px hsla(var(--metrology-gray-6), .5); */
 }
 
 .mx_RoomHeader_wrapper {
@@ -386,6 +396,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Messages */
+
+.bp_MainPanel {
+  z-index: 10;
+  box-shadow: 0 4px 24px 0 hsla(var(--metrology-shadow));
+}
+
+.mx_RoomView_body {
+  box-shadow: none;
+}
 
 .mx_RoomView_body .mx_RoomView_timeline {
   margin-top: -56px;
@@ -879,5 +898,16 @@ hr.mx_RoomView_myReadMarker {
 .mx_SettingsTab_section .mx_SettingsFlag {
   margin-right: 80px;
   margin-bottom: 12px;
+}
+
+
+/* Tooltip */
+
+.bp_PopperTooltip {
+  --tooltipBackground: #fff;
+  --tooltipBorder: #fff;
+  border-radius: var(--metrology-round-corner-small);
+  color: hsl(var(--metrology-text-primary));
+  box-shadow: 0 4px 12px 0px hsla(var(--metrology-shadow));
 }
 
