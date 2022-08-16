@@ -49,6 +49,10 @@ body {
   background-color: hsl(var(--metrology-background));
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(var(--metrology-text-heading));
+}
+
 
 /* Left Panel */
 
@@ -254,6 +258,7 @@ body {
 
 .bp_RoomTile .name {
   padding: 2px 2px 4px 0;
+  color: hsl(var(--metrology-text-primary));
 }
 
 .bp_RoomTile .preview {
@@ -262,7 +267,9 @@ body {
 }
 
 .bp_RoomTile .preview>span {
-  color: hsl(var(--metrology-gray-6));
+  color: hsl(var(--metrology-text-secondary));
+}
+
 }
 
 .bp_RoomTile:not(.small) .indicator.unread {
@@ -364,6 +371,7 @@ body {
   text-transform: uppercase;
   font-size: 1.15rem;
   letter-spacing: .75px;
+  color: hsl(var(--metrology-text-secondary));
 }
 .mx_RoomView_dateSeparator_container .mx_DateSeparator>div {
   background: none;
@@ -487,6 +495,9 @@ body {
   padding: 6px 12px 8px;
 }
 
+.mx_EventTile_message .mx_MessageTimestamp, .mx_EventTile_sticker .mx_MessageTimestamp {
+  color: hsl(var(--metrology-text-secondary));
+}
 .mx_ReplyChain_wrapper .mx_ReplyChain:last-child {
   margin-bottom: 4px;
   border-bottom-left-radius: var(--metrology-round-corner-medium);
@@ -545,6 +556,10 @@ hr.mx_RoomView_myReadMarker {
 .mx_SendMessageComposer .mx_BasicMessageComposer .mx_BasicMessageComposer_input>:first-child {
   line-height: 2.1rem;
   margin-top: 0;
+}
+
+.mx_BasicMessageComposer .mx_BasicMessageComposer_input.mx_BasicMessageComposer_input_shouldShowPillAvatar {
+  color: hsl(var(--metrology-text-primary));
 }
 
 .mx_MessageComposer_send {
@@ -625,11 +640,17 @@ hr.mx_RoomView_myReadMarker {
 
 .mx_IconizedContextMenu .mx_IconizedContextMenu_optionList .mx_AccessibleButton {
   font-size: 1.3rem;
+  color: hsl(var(--metrology-text-primary));
 }
 
 .mx_IconizedContextMenu.mx_IconizedContextMenu_compact .mx_IconizedContextMenu_optionList>* {
   padding: 6px 16px 6px 11px;
 }
+
+.mx_RoomTile2_contextMenu .mx_IconizedContextMenu_icon:before {
+  background: hsl(var(--metrology-text-secondary));
+}
+
 
 #confirmConnectionSearchInput, #newChatUserSearchInput {
   background-color: hsl(var(--metrology-gray-2));
@@ -700,6 +721,7 @@ hr.mx_RoomView_myReadMarker {
 .mx_TabbedView_tabsOnLeft .mx_TabbedView_tabLabel_active {
   background-color: transparent;
   border-left: 4px solid hsl(var(--metrology-accent));
+  color: hsl(var(--metrology-text-primary));
 }
 
 .mx_TabbedView_tabsOnLeft .mx_TabbedView_maskedIcon {
@@ -725,6 +747,7 @@ hr.mx_RoomView_myReadMarker {
 .mx_TabbedView_tabsOnLeft .mx_TabbedView_tabLabels {
   width: 220px;
   max-width: 220px;
+  color: hsl(var(--metrology-text-primary));
 }
 
 .ChatNetworksDialog-leftbar .tabbar .tab .name {
@@ -740,6 +763,15 @@ hr.mx_RoomView_myReadMarker {
 
 .ChatNetworksDialog-leftbar .tabbar .tab.selected, .ChatNetworksDialog-leftbar .tabbar .tab.selected:hover {
   background: hsl(var(--metrology-accent));
+}
+
+
+.mx_SettingsTab_subheading {
+  color: hsl(var(--metrology-text-heading));
+}
+
+.mx_Field label {
+  color: hsl(var(--metrology-text-secondary));
 }
 
 
