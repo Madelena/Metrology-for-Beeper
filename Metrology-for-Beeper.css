@@ -606,6 +606,18 @@ hr.mx_RoomView_myReadMarker {
 }
 
 
+/* Message Alerts */
+
+.mx_RoomView_statusArea {
+  background-color: hsl(var(--metrology-background));
+}
+
+.mx_RoomStatusBar_unsentMessages>div[role=alert] {
+  background-color: hsl(var(--metrology-gray-3));
+  border-radius: var(--metrology-round-corner-medium);
+}
+
+
 /* Message Search */
 
 .mx_RoomView_auxPanel, .mx_RoomView_lowerAuxPanel {
