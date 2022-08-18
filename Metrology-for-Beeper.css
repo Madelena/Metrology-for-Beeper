@@ -919,8 +919,8 @@ hr.mx_RoomView_myReadMarker {
 /* Tooltip */
 
 .bp_PopperTooltip {
-  --tooltipBackground: #fff;
-  --tooltipBorder: #fff;
+  --tooltipBackground: hsl(var(--metrology-background));
+  --tooltipBorder: hsl(var(--metrology-background));
   border-radius: var(--metrology-round-corner-small);
   color: hsl(var(--metrology-text-primary));
   box-shadow: 0 4px 12px 0px hsla(var(--metrology-shadow));
