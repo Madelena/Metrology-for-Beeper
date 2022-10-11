@@ -606,6 +606,10 @@ hr.mx_RoomView_myReadMarker {
   margin-bottom: 8px;
 }
 
+.mx_EventTile--colourful.mx_EventTile_messageIn .mx_ReactionsRowButton.mx_ReactionsRowButton_selected, .mx_EventTile--colourful.mx_EventTile_messageIn .mx_ReactionsRow_addReaction.mx_ReactionsRowButton_selected {
+  background-color: hsl(var(--metrology-accent));
+}
+
 .mx_ReactionsRowButton {
   background: hsl(var(--metrology-gray-2));
   border: 0;
