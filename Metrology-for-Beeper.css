@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Contact List */
+/* Rooms List */
 
 .bp_LeftPanel, .bp_new-conversation-view .bp_LeftPanel, .bp_LeftPanel .rooms_subtitle-container, .bp_RoomTile .actions-container .info {
   background-color: hsl(var(--metrology-gray-1)) !important;
@@ -276,9 +276,9 @@ h1, h2, h3, h4, h5, h6 {
   border-left: 4px solid hsl(var(--metrology-accent));
 }
 
-.bp_RoomTile:not(.small):hover:not(.active) .outline {
-  background-color: hsl(var(--metrology-gray-3));
-}
+.bp_new-conversation-view .bp_RoomTile:not(.small):hover:not(.active) .outline, .bp_RoomTile:not(.small):hover:not(.active) .outline {
+  background: hsl(var(--metrology-gray-3)) !important;
+} 
 
 .bp_RoomTile .name {
   padding: 2px 2px 4px 0;
@@ -339,8 +339,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: hsl(var(--metrology-gray-3)) !important;
 }
 
-.bp_RoomTile:not(.small):hover:not(.active) .outline .mask, .bp_RoomTile:not(.small).active .outline .mask {
-  background: linear-gradient(90deg,transparent 50%,hsl(var(--metrology-gray-3)) 90%);
+.bp_new-conversation-view .bp_RoomTile:not(.small):hover:not(.active) .outline .mask, .bp_RoomTile:not(.small):hover:not(.active) .outline .mask, .bp_RoomTile:not(.small).active .outline .mask {
+  background: linear-gradient(90deg,transparent 50%,hsl(var(--metrology-gray-3)) 90%) !important;
 }
 
 .bp_new-conversation-view .bp_RoomTile:not(.small):hover:not(.active) .row.info, .bp_RoomTile:not(.small):hover:not(.active) .row.info {
