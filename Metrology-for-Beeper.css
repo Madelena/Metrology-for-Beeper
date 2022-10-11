@@ -37,6 +37,13 @@ body {
   color: hsl(var(--metrology-text-primary)) ;
 }
 
+:root {
+  --message-color-lightness: 100%;
+  --message-bg-saturation: 25%;
+  --message-bg-lightness: 15%;
+  --message-bg-opacity: 1;
+}
+
 .bp_TitleBar {
   background-color: transparent;
   position: absolute;
@@ -237,8 +244,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact List */
 
-.bp_LeftPanel, .bp_LeftPanel .rooms_subtitle-container, .bp_RoomTile .actions-container .info {
-  background-color: hsl(var(--metrology-gray-1));
+.bp_LeftPanel, .bp_new-conversation-view .bp_LeftPanel, .bp_LeftPanel .rooms_subtitle-container, .bp_RoomTile .actions-container .info {
+  background-color: hsl(var(--metrology-gray-1)) !important;
 }
 
 .bp_LeftPanel .rooms_subtitle-container {
@@ -348,13 +355,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Main Panel */
-
-.bp_MainPanel {
-  margin-left: 1px;
-}
-
-
 /* Room Header */
 
 .mx_RoomHeader {
@@ -394,11 +394,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 /* Messages */
 
 .bp_MainPanel {
   z-index: 10;
   box-shadow: 0 4px 24px 0 hsla(var(--metrology-shadow));
+  margin-left: 1px;
+}
+
+.bp_new-conversation-view .bp_MainPanel {
+  background-color: hsl(var(--metrology-background)) !important;  
 }
 
 .mx_RoomView_body {
@@ -408,6 +414,10 @@ h1, h2, h3, h4, h5, h6 {
 .mx_RoomView_body .mx_RoomView_timeline {
   margin-top: -56px;
   margin-bottom: -80px;
+}
+
+.mx_ScrollPanel .mx_RoomView_MessageList {
+  background-color: hsl(var(--metrology-background));
 }
 
 .mx_RoomView_body .mx_RoomView_messagePanel, .mx_RoomView_body .mx_RoomView_messagePanelSearchSpinner, .mx_RoomView_body .mx_RoomView_messagePanelSpinner {
@@ -429,21 +439,39 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--metrology-text-primary));
 }
 
-.mx_EventTile_messageOut .mx_EventTile_line {
-  background: linear-gradient(145deg,hsl(var(--metrology-accent)) 3%,hsl(var(--metrology-complement)) 97%);
-  color: hsl(var(--metrology-text-primary));
+.mx_EventTile_messageIn .mx_EventTile_line--colourful {
+  background: hsla( var(--default-avatar-hue), 100%, 70%, 0.07);
+  background: hsla( var(--avatar-hue, var(--default-avatar-hue)), var(--message-bg-saturation), var(--message-bg-lightness), var(--message-bg-opacity) );
+  color: hsla( var(--default-avatar-hue), 100%, 90%, 1);
+  color: hsla( var(--avatar-hue, var(--default-avatar-hue)), var(--message-color-saturation), var(--message-color-lightness), var(--message-color-opacity) );
 }
 
-.mx_EventTile_message.mx_EventTile_messageIn .mx_EventTile_line::before {
-  content: "◢";
+.mx_EventTile_messageOut.mx_EventTile--colourful:not(.mx_EventTile_emoji):not(.mx_EventTile_image) .mx_EventTile_line,
+.mx_EventTile_messageOut .mx_EventTile_line {
+  background: linear-gradient(145deg,hsl(var(--metrology-accent)) 3%,hsl(var(--metrology-complement)) 97%) !important;
+  color: hsl(var(--metrology-text-primary)) !important;
+}
+
+.mx_EventTile_lastInSection.mx_EventTile_message.mx_EventTile_messageIn .mx_EventTile_line::before {
+  content: "◢" !important;
   position: absolute;
-  bottom: -1px;
+  bottom: -1px !important;
   left: -9px;
   color: hsl(var(--metrology-gray-3));
+  color: hsla( var(--default-avatar-hue), 100%, 70%, 0.07);
+  color: hsla( var(--avatar-hue, var(--default-avatar-hue)), var(--message-bg-saturation), var(--message-bg-lightness), var(--message-bg-opacity) );
   line-height: 1;
+  transform: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  background: none !important;
 }
 
-.mx_EventTile_message.mx_EventTile_messageOut .mx_EventTile_line::after {
+.mx_EventTile_lastInSection.mx_EventTile_messageOut:not(.mx_EventTile_emoji):not(.mx_EventTile_image):not(.mx_EventTile_file) .mx_EventTile_line--colourful:before {
+  display: none !important;
+}
+
+.mx_EventTile_lastInSection.mx_EventTile_message.mx_EventTile_messageOut .mx_EventTile_line::after {
   content: "◣";
   position: absolute;
   bottom: -1px;
@@ -687,6 +715,10 @@ hr.mx_RoomView_myReadMarker {
 
 .dark-panel {
   background-color: hsl(var(--metrology-gray-1));
+}
+
+.mx_MainSplit {
+  background-color: hsl(var(--metrology-background));
 }
 
 .mx_RightPanel_headerButton_highlight:before {
