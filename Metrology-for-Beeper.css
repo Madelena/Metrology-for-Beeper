@@ -1,5 +1,5 @@
 
-body {
+:root {
   --metrology-hue: 335; /* Enter values between 0 and 359 to change the color of the theme. */
 
   --metrology-accent: var(--metrology-hue), 100%, 38%;
@@ -18,6 +18,11 @@ body {
   --metrology-gray-6: 0, 0%, 46%;
   --metrology-shadow: 0, 0%, 0%, .25;
 
+  --message-color-lightness: 100%;
+  --message-bg-saturation: 25%;
+  --message-bg-lightness: 15%;
+  --message-bg-opacity: 1;
+
   /* Light Theme - Uncomment the following code to apply, then switch to Light Theme in the app. */
   /* --metrology-background: 0, 0%, 100%;
   --metrology-text-primary: 0, 0%, 0%;
@@ -28,7 +33,13 @@ body {
   --metrology-gray-2: 0, 0%, 95%;
   --metrology-gray-3: 0, 0%, 90%;
   --metrology-gray-6: 0, 0%, 82%;
-  --metrology-shadow: 0, 0%, 0%, .1; */
+  --metrology-shadow: 0, 0%, 0%, .1;
+
+  --message-color-lightness: 0%;
+  --message-bg-saturation: 25%;
+  --message-bg-lightness: 95%;
+  --message-bg-opacity: 1; */
+
 
   --metrology-round-corner-small: 0;
   --metrology-round-corner-medium: 4px; /* 0 for the sharp Metro experience. 4px for a more moderate Fluent. */
@@ -37,12 +48,6 @@ body {
   color: hsl(var(--metrology-text-primary)) ;
 }
 
-:root {
-  --message-color-lightness: 100%;
-  --message-bg-saturation: 25%;
-  --message-bg-lightness: 15%;
-  --message-bg-opacity: 1;
-}
 
 .bp_TitleBar {
   background-color: transparent;
@@ -266,6 +271,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px 4px 8px 4px;
 }
 
+.bp_RoomTile:not(.small).active .outline {
+  padding: 8px 4px 8px 0px;
+  border-left: 4px solid hsl(var(--metrology-accent));
+}
+
 .bp_RoomTile:not(.small):hover:not(.active) .outline {
   background-color: hsl(var(--metrology-gray-3));
 }
@@ -325,16 +335,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-.bp_RoomTile:not(.small).active .outline, .bp_RoomTile:not(.small).active .outline.electronTransparency, .bp_RoomTile:not(.small).active .row.info {
-  background-color: hsl(var(--metrology-gray-3));
+.bp_RoomTile:not(.small).active .outline, .bp_new-conversation-view .bp_RoomTile:not(.small).active .outline, .bp_RoomTile:not(.small).active .outline.electronTransparency, .bp_new-conversation-view .bp_RoomTile:not(.small).active .row.info, .bp_RoomTile:not(.small).active .row.info, .bp_new-conversation-view .bp_RoomTile:not(.small).active .row.info {
+  background-color: hsl(var(--metrology-gray-3)) !important;
 }
 
 .bp_RoomTile:not(.small):hover:not(.active) .outline .mask, .bp_RoomTile:not(.small).active .outline .mask {
   background: linear-gradient(90deg,transparent 50%,hsl(var(--metrology-gray-3)) 90%);
 }
 
-.bp_RoomTile:not(.small):hover:not(.active) .row.info {
-  background: hsl(var(--metrology-gray-3));
+.bp_new-conversation-view .bp_RoomTile:not(.small):hover:not(.active) .row.info, .bp_RoomTile:not(.small):hover:not(.active) .row.info {
+  background: hsl(var(--metrology-gray-3)) !important;
 }
 
 .bp_RoomTile .tile_actions-button, .bp_RoomTile .tile_actions .bp_Button2 {
@@ -352,6 +362,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .mx_MatrixChat.resizing>.mx_ResizeHandle, .mx_MatrixChat>.mx_ResizeHandle:hover, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle.resizing, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle:hover {
   box-shadow: inset 4px 0 0 0 hsl(var(--metrology-accent));
+}
+
+.bp_new-conversation-view .mx_MatrixChat > .mx_ResizeHandle, .bp_new-conversation-view .mx_RightPanel_ResizeWrapper .mx_ResizeHandle {
+  box-shadow: hsl(0deg 0% 100% / 0%) 1px 0px 0px 0px inset !important;
 }
 
 
