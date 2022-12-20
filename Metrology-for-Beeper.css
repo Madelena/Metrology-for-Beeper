@@ -136,12 +136,20 @@ h1, h2, h3, h4, h5, h6 {
   border-right: 4px solid transparent;
 }
 
-.bp_LeftPanel .spaceBar .bp_SpaceBarItem_image {
-  background-color: hsl(var(--metrology-text-primary));
-}
+/* .bp_LeftPanel .spaceBar .bp_SpaceBarItem_image {
+  background-color: hsl(var(--metrology-text-primary)) !important;
+} */
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_SpaceBarItem_badge {
-  background-color: hsl(var(--metrology-accent));
+  background-color: hsl(var(--metrology-accent)) !important;
+  color: hsl(var(--metrology-text-primary)) !important;
+  top: 0;
+  right: 0;
+}
+
+.bp_LeftPanel .spaceBar .bp_SpaceBarItem:hover .bp_SpaceBarItem_badge, .bp_LeftPanel .spaceBar .bp_SpaceBarItem.active .bp_SpaceBarItem_badge {
+  top: 0;
+  right: 0;
 }
 
 .bp_LeftPanel .spaceBar .bp_SpaceBarItem .bp_Avatar, .bp_LeftPanel .spaceBar .bp_SpaceBarItem img {
