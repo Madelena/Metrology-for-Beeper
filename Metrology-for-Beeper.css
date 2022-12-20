@@ -1028,3 +1028,17 @@ hr.mx_RoomView_myReadMarker {
   box-shadow: 0 4px 12px 0px hsla(var(--metrology-shadow));
 }
 
+
+/* Toast Container */
+
+.mx_ToastContainer {
+  bottom: 48px;
+  left: 64px;
+  padding: 0;
+}
+
+.mx_ToastContainer .mx_Toast_toast {
+  border-radius: var(--metrology-round-corner-medium);
+  padding: 8px 12px 12px 12px !important;
+  background-color: hsl(var(--metrology-gray-2));
+}
