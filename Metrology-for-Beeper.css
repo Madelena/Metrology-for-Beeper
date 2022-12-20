@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bp_LeftPanel .rooms_subtitle-container {
-  min-height: 24px !important;
+  min-height: 32px !important;
 }
 
 .bp_new-conversation-view .rooms_subtitle {
@@ -283,7 +283,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 4px;
-  color: hsl(var(--metrology-text-secondary))
+  color: hsl(var(--metrology-text-secondary)) !important;
+  opacity: 1 !important;
+  padding-left: 32px !important;
 }
 
 .bp_RoomTile {
@@ -416,13 +418,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px !important;
   line-height: 18px !important;
   color: hsl(var(--metrology-text-secondary)) !important;
-  left: 64px !important;
+  left: 56px !important;
   bottom: 8px !important;
+  padding-right: 0 !important;
 }
 
 .bp_ArchivedList_button--expanded {
   left: 0 !important;
-  padding-left: 20px;
+  padding-left: 16px;
 }
 
 
