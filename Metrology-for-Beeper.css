@@ -723,12 +723,12 @@ hr.mx_RoomView_myReadMarker {
   color: hsl(var(--metrology-text-primary));
 }
 
-.mx_MessageComposer_send {
-  background: linear-gradient(160deg, hsl(var(--metrology-complement)) 3%, hsl(var(--metrology-accent)) 128.02%);
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.mx_MessageComposer_wrapper .mx_MessageComposer_send, .mx_MessageComposer_send {
+  background: linear-gradient(160deg, hsl(var(--metrology-complement)) 3%, hsl(var(--metrology-accent)) 128.02%) !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .mx_EmojiPicker_category_label, .mx_EmojiPicker_preview_name {
