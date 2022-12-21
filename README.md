@@ -4,7 +4,7 @@ Metrology is a series of app customizations and redesigns aimed at bringing a bo
 
 This is a theme for [Beeper](https://www.beeper.com/), a brand-new universal chat client!
 
-![image](https://user-images.githubusercontent.com/4341881/208801279-b820af88-176b-4553-93fd-682eddf0d386.png)
+![image](https://user-images.githubusercontent.com/4341881/208801734-27924ab0-fca2-48f7-830b-deb312ca993b.png)
 *Dark Theme*
 
 ![image](https://user-images.githubusercontent.com/4341881/208801551-3e1e637b-bd79-40f8-850b-26322019f49e.png)
