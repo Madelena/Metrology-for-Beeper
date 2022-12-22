@@ -44,6 +44,8 @@
   --metrology-round-corner-small: 0;
   --metrology-round-corner-medium: 4px; /* 0 for the sharp Metro experience. 4px for a more moderate Fluent. */
 
+  --metrology-favorites-size: 64px;
+
   background-color: hsl(var(--metrology-background));
   color: hsl(var(--metrology-text-primary)) ;
 }
@@ -65,6 +67,10 @@
 
 h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--metrology-text-heading));
+}
+
+code {
+  font-family: ui-monospace, monospace !important;
 }
 
 
@@ -213,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bp_LeftPanel .rooms .favourites__tiles {
-  gap: 32px;
+  gap: calc(var(--metrology-favorites-size) / 2);
   padding: 24px 20px;
   justify-content: center;
 }
@@ -224,22 +230,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bp_LeftPanel .rooms .favourites_avatar {
-  height: 64px;
+  height: var(--metrology-favorites-size);
 }
 
 .bp_LeftPanel .rooms .favourites .bp_RoomTile.small .outline .avatar .mx_BaseAvatar_initial {
-  width: 64px!important;
-  line-height: 64px!important;
+  width: var(--metrology-favorites-size)!important;
+  line-height: var(--metrology-favorites-size)!important;
 }
 
 .bp_LeftPanel .rooms .favourites .bp_RoomTile.small .outline .mx_BaseAvatar_image {
-  width: 64px!important;
-  height: 64px!important;
+  width: var(--metrology-favorites-size)!important;
+  height: var(--metrology-favorites-size)!important;
 }
 
 .bp_LeftPanel .rooms .favourites .mx_BaseAvatar_image {
-  width: 64px!important;
-  height: 64px!important;
+  width: var(--metrology-favorites-size)!important;
+  height: var(--metrology-favorites-size)!important;
 }
 
 .bp_LeftPanel .rooms .favourites_avatar--unread .mx_BaseAvatar {
