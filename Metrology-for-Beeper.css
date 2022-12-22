@@ -594,6 +594,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-right-radius: 0!important;
 }
 
+.mx_EventTile_messageOut.mx_EventTile--colourful .mx_EventTile_caption, .mx_EventTile_messageOut.mx_EventTile--colourful .mx_EventTile_content-caption {
+  background: transparent !important;
+}
+
 .mx_EventTile_message .mx_MessageTimestamp,
 .mx_EventTile_sticker .mx_MessageTimestamp {
   font-size: 10px;
