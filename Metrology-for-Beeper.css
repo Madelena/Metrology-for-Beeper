@@ -598,6 +598,10 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent !important;
 }
 
+.mx_EventTile--colourful.mx_EventTile_messageOut .mx_EventTile_reactionsContainer {
+  background: transparent !important;
+}
+
 .mx_EventTile_message .mx_MessageTimestamp,
 .mx_EventTile_sticker .mx_MessageTimestamp {
   font-size: 10px;
