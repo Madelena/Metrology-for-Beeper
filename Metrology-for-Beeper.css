@@ -1140,6 +1140,7 @@ select {
 /* Toast Container */
 
 .mx_ToastContainer {
+  top: auto !important;
   bottom: 48px;
   left: 64px;
   padding: 0;
