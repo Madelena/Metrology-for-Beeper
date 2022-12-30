@@ -401,6 +401,10 @@ code {
   background-color: hsl(var(--metrology-gray-3));
 }
 
+.bp_RoomTile:not(.small):hover .tile_actions {
+  background: hsl(var(--metrology-gray-3));
+}
+
 .bp_LeftPanel .rooms .unread_hint {
   padding: 32px 48px;
   color: hsl(var(--metrology-gray-6))
