@@ -405,6 +405,17 @@ code {
   background: hsl(var(--metrology-gray-3));
 }
 
+.bp_new-conversation-view .tile_actions-button:hover {
+  background-color: inherit !important;
+}
+
+.bp_RoomTile .tile_actions-item {
+  color: hsl(var(--metrology-text-secondary)) !important;
+}
+.bp_new-conversation-view .tile_actions-button:hover .tile_actions-item {
+  color: hsl(var(--metrology-accent)) !important;
+}
+
 .bp_LeftPanel .rooms .unread_hint {
   padding: 32px 48px;
   color: hsl(var(--metrology-gray-6))
