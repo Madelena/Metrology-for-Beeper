@@ -84,6 +84,10 @@ code {
   margin-right: 0;
 }
 
+.bp_LeftPanel .bp_LeftPanel_content {
+  overflow: visible;
+}
+
 
 /* Space Bar */
 
@@ -91,8 +95,8 @@ code {
   padding: 32px 0 0 0;
   margin-bottom: 0;
   position: absolute !important;
-  top: 0;
-  left: 0;
+  top: -72px;
+  left: -48px;
   background: hsl(var(--metrology-gray-2));
   height: calc(100vh - 36px) !important;
   width: 48px;
@@ -439,8 +443,8 @@ code {
   font-size: 16px !important;
   line-height: 18px !important;
   color: hsl(var(--metrology-text-secondary)) !important;
-  left: 56px !important;
-  bottom: 8px !important;
+  left: 8px !important;
+  bottom: 4px !important;
   padding-right: 0 !important;
 }
 
