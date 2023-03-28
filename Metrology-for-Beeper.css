@@ -88,6 +88,18 @@ code {
   overflow: visible;
 }
 
+.bp_LeftPanel--SNCV2 {
+  overflow: visible;
+}
+
+.bp_LeftPanel--SNCV2 .bp_LeftPanel_content:first-of-type {
+  transition: opacity 1s;
+}
+
+.bp_LeftPanel--SNCV2 .bp_LeftPanel_contentWrapper--search .bp_LeftPanel_content:first-of-type {
+  opacity: 0;
+}
+
 
 /* Space Bar */
 
@@ -192,6 +204,14 @@ code {
   margin-bottom: -48px;
 }
 
+.bp_LeftPanel--SNCV2 .bp_Header + div {
+  margin: 8px 0;
+}
+
+.bp_LeftPanel--SNCV2 .bp_Header + div > div:last-child {
+  margin-right: 96px;
+}
+
 .bp_LeftPanel .searchBar {
   padding: 0 112px 0 16px;
 }
@@ -212,6 +232,22 @@ code {
 
 .bp_CommandBarSearch_shortcutHint {
   display: none;
+}
+
+.bp_LeftPanel--SNCV2 .bp_Header + div > .mx_AccessibleButton {
+  margin-right: 0;
+}
+
+.bp_LeftPanel--SNCV2 .bp_Header + div > .mx_AccessibleButton .bp_Button2 {
+  padding: 0 16px;
+}
+
+.bp_LeftPanel--SNCV2 .bp_LeftPanel_contentWrapper--search .bp_LeftPanel_content:nth-child(2) > div > section {
+  padding: 4px 0 0 16px;
+}
+
+div[data-type="SearchResultsTile"] .bp_RoomTile {
+  margin-left: -16px;
 }
 
 
