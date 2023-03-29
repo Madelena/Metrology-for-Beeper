@@ -1191,6 +1191,18 @@ select {
   box-shadow: 0 4px 12px 0px hsla(var(--metrology-shadow));
 }
 
+.tile_actions-tooltip.bp_PopperTooltip .tile_actions {
+  gap: 0 !important;
+  grid-gap: 0 !important;
+  width: 24px !important;
+  margin: -4px;
+}
+
+.tile_actions-tooltip.bp_PopperTooltip .tile_actions-button {
+  border-radius: var(--metrology-round-corner-small);
+  backdrop-filter: blur(8px);
+  background-color: hsla(var(--metrology-gray-6),.25);
+}
 
 /* Toast Container */
 
