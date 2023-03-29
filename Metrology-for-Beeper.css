@@ -1204,6 +1204,18 @@ select {
   background-color: hsla(var(--metrology-gray-6),.25);
 }
 
+
+.bp_PopperTooltip.undefined {
+  backdrop-filter: blur(8px);
+  margin: -44px 0 0 48px;
+  border: 1px solid var(--tooltipBorder);
+}
+
+.bp_PopperTooltip.undefined .bp_PopperTooltipArrow {
+  display: none
+}
+
+
 /* Toast Container */
 
 .mx_ToastContainer {
