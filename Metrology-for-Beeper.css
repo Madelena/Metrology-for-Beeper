@@ -104,16 +104,15 @@ code {
 /* Space Bar */
 
 .bp_LeftPanel .spaceBar {
-  padding: 32px 0 0 0;
+  padding: 32px 0 4px 0;
   margin-bottom: 0;
   position: absolute !important;
-  top: -72px;
+  top: -76px;
   left: -48px;
   background: hsl(var(--metrology-gray-2));
-  height: calc(100vh - 36px) !important;
+  height: calc(100vh + 8px) !important;
   width: 48px;
-  padding-top: 36px;
-  box-shadow: -8px 0px 24px -12px hsla(var(--metrology-shadow)) inset;
+  box-shadow: -8px 0px 24px -12px hsla(var(--metrology-shadow)) inset, -1px 0 0 inset hsla(var(--metrology-gray-6),.25)
 }
 
 .bp_LeftPanel .spaceBar .grid {
@@ -467,7 +466,11 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
 }
 
 .bp_new-conversation-view .mx_MatrixChat > .mx_ResizeHandle, .bp_new-conversation-view .mx_RightPanel_ResizeWrapper .mx_ResizeHandle {
-  box-shadow: hsl(0deg 0% 100% / 0%) 1px 0px 0px 0px inset !important;
+  box-shadow: hsla(var(--metrology-gray-6),.25) 1px 0px 0px 0px inset !important;
+}
+
+.mx_MatrixChat > .mx_ResizeHandle, .mx_RightPanel_ResizeWrapper .mx_ResizeHandle {
+  box-shadow: hsla(var(--metrology-gray-6),.25) 1px 0px 0px 0px inset;
 }
 
 
