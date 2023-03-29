@@ -325,13 +325,14 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
   font-weight: 600 !important;
 }
 
-.bp_LeftPanel .rooms_subtitle {
+.mx_MatrixChat_wrapper .rooms_subtitle {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 4px;
   color: hsl(var(--metrology-text-secondary)) !important;
   opacity: 1 !important;
   padding-left: 32px !important;
+  font-weight: 600 !important;
 }
 
 .bp_RoomTile {
