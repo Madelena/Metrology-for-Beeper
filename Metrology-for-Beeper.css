@@ -1184,8 +1184,8 @@ select {
 /* Tooltip */
 
 .bp_PopperTooltip {
-  --tooltipBackground: hsl(var(--metrology-background));
-  --tooltipBorder: hsl(var(--metrology-background));
+  --tooltipBackground: hsla(var(--metrology-gray-3),.5);
+  --tooltipBorder: hsla(var(--metrology-gray-6),.25);
   border-radius: var(--metrology-round-corner-small);
   color: hsl(var(--metrology-text-primary));
   box-shadow: 0 4px 12px 0px hsla(var(--metrology-shadow));
@@ -1204,6 +1204,13 @@ select {
   background-color: hsla(var(--metrology-gray-6),.25);
 }
 
+.mx_Tooltip {
+  border-radius: 0;
+  background-color: var(--tooltipBackground);
+  backdrop-filter: blur(8px);
+  border: 1px solid hsla(var(--metrology-gray-6),.25);
+  padding: 8px;
+}
 
 .bp_PopperTooltip.undefined {
   backdrop-filter: blur(8px);
