@@ -110,7 +110,7 @@ code {
   top: -76px;
   left: -48px;
   background: hsl(var(--metrology-gray-2));
-  height: calc(100vh + 8px) !important;
+  height: calc(100vh - 32px) !important;
   width: 48px;
   box-shadow: -8px 0px 24px -12px hsla(var(--metrology-shadow)) inset, -1px 0 0 inset hsla(var(--metrology-gray-6),.25)
 }
