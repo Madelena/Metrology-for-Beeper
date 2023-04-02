@@ -641,7 +641,7 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
 .mx_EventTile_lastInSection.mx_EventTile_message.mx_EventTile_messageIn .mx_EventTile_line::before {
   content: "◢" !important;
   position: absolute;
-  bottom: -1px !important;
+  bottom: -2px !important;
   left: -9px;
   color: hsl(var(--metrology-gray-3));
   color: hsla( var(--default-avatar-hue), 100%, 70%, 0.07);
@@ -657,10 +657,14 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
   display: none !important;
 }
 
+.mx_EventTile_messageOut.mx_EventTile_lastInSection .mx_EventTile_line:before {
+  display: none;
+}
+
 .mx_EventTile_lastInSection.mx_EventTile_message.mx_EventTile_messageOut .mx_EventTile_line::after {
   content: "◣";
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   right: -9px;
   color: hsl(var(--metrology-complement));
   text-align: right;
