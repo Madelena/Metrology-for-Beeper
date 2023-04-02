@@ -46,6 +46,7 @@
 
   --metrology-favorites-size: 64px;
 
+  --default-avatar-hue: var(--metrology-hue);
   background-color: hsl(var(--metrology-background));
   color: hsl(var(--metrology-text-primary)) ;
 }
