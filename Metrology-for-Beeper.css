@@ -632,6 +632,7 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
   color: hsla( var(--avatar-hue, var(--default-avatar-hue)), var(--message-color-saturation), var(--message-color-lightness), var(--message-color-opacity) );
 }
 
+.mx_EventTile_messageOut:not(.mx_EventTile_emoji, .mx_EventTile_image, .mx_EventTile_sticker) .mx_EventTile_line,
 .mx_EventTile_messageOut.mx_EventTile--colourful:not(.mx_EventTile_emoji):not(.mx_EventTile_image) .mx_EventTile_line,
 .mx_EventTile_messageOut .mx_EventTile_line {
   background: linear-gradient(145deg,hsl(var(--metrology-accent)) 3%,hsl(var(--metrology-complement)) 97%) !important;
