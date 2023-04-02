@@ -50,6 +50,13 @@
   color: hsl(var(--metrology-text-primary)) ;
 }
 
+.mx_MatrixChat_wrapper:not(.mx_MatrixChat_wrapper--colorful) {
+  --default-avatar-hue: var(--metrology-hue);
+  --message-color-lightness: 100%;
+  --message-bg-saturation: 25%;
+  --message-bg-lightness: 15%;
+  --message-bg-opacity: 1;
+}
 
 .bp_TitleBar {
   background-color: transparent;
@@ -614,7 +621,7 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
 }
 
 .mx_EventTile_messageIn .mx_EventTile_line {
-  background: hsl(var(--metrology-gray-3));
+  /* background: hsl(var(--metrology-gray-3)); */
   color: hsl(var(--metrology-text-primary));
 }
 
