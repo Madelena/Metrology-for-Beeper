@@ -152,15 +152,19 @@ code {
   background-color: hsl(var(--metrology-gray-2)) !important;
   padding-top: 0 !important;
   height: 100% !important;
+  margin-left: 0 !important;
 }
 
 .mx_MatrixChat>.noselect .bp_col {
-  margin: 32px 0px 0px 0px !important;
+  margin: 48px 0px 0px 0px !important;
 }
 
+.mx_MatrixChat>.noselect>div:first-child {
+  top: 42px;
+}
 
 .bp_LeftPanel .spaceBar {
-  padding: 32px 0 0 0;
+  padding: 48px 0 0 0;
   margin-bottom: 0;
   position: absolute !important;
   top: -76px;
@@ -257,6 +261,9 @@ code {
   margin-top: 32px;
   height: 48px;
   margin-bottom: -48px;
+  left: 40px;
+  margin-right: 40px;
+  position: relative;
 }
 
 .bp_LeftPanel .bp_Header + div {
@@ -367,6 +374,16 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
 
 
 /* Rooms List */
+
+div[data-type="bp_RoomTile"] {
+  padding: 0 0;
+}
+
+div[data-type="bp_RoomTile"]>div {
+  border-radius: var(--metrology-round-corner-small);
+  padding: 0 16px;
+  background-color: transparent;
+}
 
 .bp_LeftPanel, .bp_new-conversation-view .bp_LeftPanel, .bp_LeftPanel .rooms_subtitle-container, .bp_RoomTile .actions-container .info {
   background-color: hsl(var(--metrology-gray-1)) !important;
