@@ -44,7 +44,7 @@
   --metrology-round-corner-small: 0;
   --metrology-round-corner-medium: 4px; /* 0 for the sharp Metro experience. 4px for a more moderate Fluent. */
 
-  --metrology-favorites-size: 64px;
+  --metrology-favorites-size: 48px;
 
   --default-avatar-hue: var(--metrology-hue);
   background-color: hsl(var(--metrology-background));
@@ -354,7 +354,7 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
   box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 0%), 0 0 0 3px hsl(var(--metrology-accent));
 }
 
-.bp_LeftPanel .rooms .favourites .bp_RoomTile.active .outline, .bp_LeftPanel .rooms .favourites .bp_RoomTile:focus .outline {
+.bp_LeftPanel .rooms .favourites .bp_RoomTile.active .outline .mx_BaseAvatar, .bp_LeftPanel .rooms .favourites .bp_RoomTile:focus .outline {
   background: hsl(var(--metrology-accent)) !important;
   box-shadow: 0 0 0 4px hsl(var(--metrology-accent));
 }
