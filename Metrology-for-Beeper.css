@@ -152,7 +152,6 @@ code {
   background-color: hsl(var(--metrology-gray-2)) !important;
   padding-top: 0 !important;
   height: 100% !important;
-  margin-left: 0 !important;
 }
 
 .mx_MatrixChat>.noselect .bp_col {
