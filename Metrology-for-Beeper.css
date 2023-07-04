@@ -49,6 +49,43 @@
   --default-avatar-hue: var(--metrology-hue);
   background-color: hsl(var(--metrology-background));
   color: hsl(var(--metrology-text-primary)) ;
+
+  --reply-bg-opacity: 0.07;
+  --reply-bg-saturation: 46%;
+  --reply-bg-lightness: 81%;
+  --reply-to-color-saturation: 100%;
+  --reply-to-color-lightness: 95%;
+  --reply-to-color-opacity: 0.8;
+  --sender-name-saturation: 100%;
+  --sender-name-lightness: 95%;
+  --timestamp-saturation: 29%;
+  --timestamp-lightness: 80%;
+  --reaction-saturation: 29%;
+  --reaction-lightness: 72%;
+  --reaction-opacity: 0.15;
+  --add-reaction-saturation: 29%;
+  --add-reaction-lightness: 80%;
+  --read-receipt-fg: hsla(240, 100%, 93%, 0.5);
+  --read-receipt-tooltip-fg: 88%;
+  --archive-background: rgb(43, 41, 47);
+  --archive-fg: white;
+  --left-panel-bg: hsl(0deg 0% 100% / 0%);
+  --main-panel-transparent-bg: #1e1e1e00;
+  --search-primary: white;
+  --base: 255, 255, 255;
+  --message-actions-fg: #d0d1d8;
+  --search-bar-input-fg: #76767b;
+  --search-input-bg-experimental: rgba(118, 118, 128, 0.12);
+  --header-control-fg: #68686d;
+  --room-tile-bg-hover: #25262dcc;
+  --tooltipText: white;
+  --tooltipBackground: #25262d;
+  --space-bar-bg: transparent;
+  --space-bar-selected: hsl(var(--metrology-accent));
+  --space-bar-error-icon: url(../../img/x-stroke-dark.d150096.svg);
+  --floating-button-bg: #312D39;
+  --left-panel-bg-no-transparency: #202020;
+  --left-panel-v2-bg-no-transparency--windows: #202020;
 }
 
 .mx_MatrixChat_wrapper:not(.mx_MatrixChat_wrapper--colorful) {
