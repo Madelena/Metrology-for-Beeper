@@ -67,7 +67,7 @@
   width: 100%;
 }
 
-.mx_MatrixChat>:not(.mx_SpacePanel):not(.mx_ResizeHandle):not(.mx_LeftPanel_wrapper):not(.bp_LeftPanel) {
+.mx_MatrixChat>:not(.mx_SpacePanel):not(.noselect):not(.mx_ResizeHandle):not(.mx_LeftPanel_wrapper):not(.bp_LeftPanel) {
   padding-top: 32px;
   height: calc(100% - 32px) !important;
   background-color: hsl(var(--metrology-background));
@@ -85,7 +85,7 @@ code {
 /* Left Panel */
 
 .bp_LeftPanel {
-  margin-left: 48px;
+  /* margin-left: 48px; */
 }
 
 .bp_LeftPanel .rooms .rooms_scroll-container {
@@ -110,6 +110,18 @@ code {
 
 
 /* Space Bar */
+
+.mx_MatrixChat>.noselect {
+  background-color: hsl(var(--metrology-gray-2)) !important;
+  padding-top: 0 !important;
+  height: 100% !important;
+  margin-left: 0 !important;
+}
+
+.mx_MatrixChat>.noselect .bp_col {
+  margin: 32px 0px 0px 0px !important;
+}
+
 
 .bp_LeftPanel .spaceBar {
   padding: 32px 0 0 0;
