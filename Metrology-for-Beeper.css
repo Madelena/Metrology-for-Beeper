@@ -415,6 +415,10 @@ div[data-type="bp_RoomTile"] > div {
   background-color: transparent;
 }
 
+div[data-type="bp_RoomTile"] > div > div > div > div:has(> span > .bp_icon) {
+  background-color: hsl(var(--metrology-accent)) !important;
+}
+
 .bp_LeftPanel,
 .bp_new-conversation-view .bp_LeftPanel,
 .bp_LeftPanel .rooms_subtitle-container,
@@ -885,8 +889,7 @@ div[data-type="bp_RoomTile"] > div {
   background: transparent !important;
 }
 
-.mx_EventTile--colourful.mx_EventTile_messageOut
-  .mx_EventTile_reactionsContainer {
+.mx_EventTile_messageOut .mx_EventTile_reactionsContainer {
   background: transparent !important;
 }
 
@@ -982,7 +985,8 @@ hr.mx_RoomView_myReadMarker {
 .mx_EventTile--colourful.mx_EventTile_messageIn
   .mx_ReactionsRowButton.mx_ReactionsRowButton_selected,
 .mx_EventTile--colourful.mx_EventTile_messageIn
-  .mx_ReactionsRow_addReaction.mx_ReactionsRowButton_selected {
+  .mx_ReactionsRow_addReaction.mx_ReactionsRowButton_selected,
+.mx_EventTile_messageIn .mx_ReactionsRowButton.mx_ReactionsRowButton_selected {
   background-color: hsl(var(--metrology-accent));
 }
 
