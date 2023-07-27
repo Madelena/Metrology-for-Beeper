@@ -403,6 +403,10 @@ div[data-type="SearchResultsTile"] .bp_RoomTile {
   margin-top: -2px;
 }
 
+.favourites__row > div > div > .outline > span > span {
+  background-color: hsl(var(--metrology-accent)) !important;
+}
+
 /* Rooms List */
 
 div[data-type="bp_RoomTile"] {
