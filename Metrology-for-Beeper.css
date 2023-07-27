@@ -1008,6 +1008,11 @@ hr.mx_RoomView_myReadMarker {
 .mx_MFileBody_info .mx_MFileBody_info_icon {
   background: hsl(var(--metrology-accent)) !important;
 }
+
+.mx_EventTile_message .mx_EventTile_controls a:hover {
+  background: hsl(var(--metrology-accent)) !important;
+}
+
 /* Message Composer */
 
 .mx_MessageComposer {
