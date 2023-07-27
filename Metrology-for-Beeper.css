@@ -1223,6 +1223,14 @@ hr.mx_RoomView_myReadMarker {
   margin: 2px -2px;
 }
 
+.bp_Select.selected {
+  border-color: hsl(var(--metrology-accent)) !important;
+}
+
+.bp_Icon.blue {
+  fill: hsl(var(--metrology-accent)) !important;
+}
+
 .mx_Dialog_wrapper {
   top: 32px;
   left: 0;
