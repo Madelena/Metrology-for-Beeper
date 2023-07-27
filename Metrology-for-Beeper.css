@@ -1231,6 +1231,10 @@ hr.mx_RoomView_myReadMarker {
   fill: hsl(var(--metrology-accent)) !important;
 }
 
+.mx_E2EIcon_verified::after {
+  background-color: hsl(var(--metrology-accent)) !important;
+}
+
 .mx_Dialog_wrapper {
   top: 32px;
   left: 0;
