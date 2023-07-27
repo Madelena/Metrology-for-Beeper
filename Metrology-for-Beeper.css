@@ -1218,6 +1218,10 @@ hr.mx_RoomView_myReadMarker {
 }
 
 /* Settings */
+.mx_StyledRadioButton_outlined {
+  border: none !important;
+  margin: 2px -2px;
+}
 
 .mx_Dialog_wrapper {
   top: 32px;
