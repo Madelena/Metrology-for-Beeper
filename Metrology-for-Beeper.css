@@ -1005,6 +1005,9 @@ hr.mx_RoomView_myReadMarker {
   background: hsl(var(--metrology-accent));
 }
 
+.mx_MFileBody_info .mx_MFileBody_info_icon {
+  background: hsl(var(--metrology-accent)) !important;
+}
 /* Message Composer */
 
 .mx_MessageComposer {
