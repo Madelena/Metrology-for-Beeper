@@ -698,6 +698,19 @@ div[data-type="bp_RoomTile"]>div {
   color: hsla( var(--avatar-hue, var(--default-avatar-hue)), var(--message-color-saturation), var(--message-color-lightness), var(--message-color-opacity) );
 }
 
+.mx_EventTile_messageOut .mx_EventTile_reactionsContainer {
+  background-color: transparent !important;
+}
+
+.mx_EventTile_messageIn .mx_ReactionsRowButton.mx_ReactionsRowButton_selected, 
+.mx_EventTile_messageIn .mx_ReactionsRow_addReaction.mx_ReactionsRowButton_selected, 
+.mx_EventTile_messageIn .mx_MImageBody-container + .mx_EventTile_reactionsContainer.mx_ReactionsRowButton_selected, 
+.mx_EventTile_messageIn.mx_EventTile_video .mx_EventTile_reactionsContainer.mx_ReactionsRowButton_selected, 
+.mx_EventTile_messageIn .mx_MImageBody-container .mx_SenderInfo_wrapper.mx_ReactionsRowButton_selected, 
+.mx_EventTile_messageIn.mx_EventTile_video .mx_EventTile_line:not(.mx_EventTile_line--caption) .mx_SenderInfo_wrapper.mx_ReactionsRowButton_selected {
+  background-color: hsl(var(--metrology-accent)) !important;
+}
+
 .mx_EventTile_messageOut:not(.mx_EventTile_emoji, .mx_EventTile_image, .mx_EventTile_sticker) .mx_EventTile_line,
 .mx_EventTile_messageOut.mx_EventTile--colourful:not(.mx_EventTile_emoji):not(.mx_EventTile_image) .mx_EventTile_line,
 .mx_EventTile_messageOut .mx_EventTile_line {
